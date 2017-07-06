@@ -1,0 +1,81 @@
+/*內容*/
+
+#main {
+	width: 100%;
+	margin-top: 20px;
+	box-sizing: border-box;
+	padding: 0px 20px;
+	background-color: #F4F4F4;
+}
+
+
+/*左侧*/
+
+.main_left {
+	width: 825px;
+	float: left;
+	padding-bottom: 60px;
+}
+
+
+/*新书推荐*/
+
+.main_left ul {
+	margin-top: 25px;
+	overflow: hidden;
+}
+
+.main_left ul li {
+	/*overflow: hidden;*/
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+.main_left ul li:nth-of-type(2n) {
+	margin-right: 0px;
+}
+
+.main_left ul li a {
+	display: inline-block;
+	width: 820px;
+	height: 222px;
+	background-color: #FFFFFF;
+	box-sizing: border-box;
+	padding: 16px 20px 0px 16px;
+	border-radius: 4px;
+}
+
+.main_left ul li a div {
+	display: inline-block;
+	width: 615px;
+	vertical-align: top;
+	margin-right: 20px;
+}
+
+.main_left ul li a img {
+	width: 140px;
+	height: 190px;
+}
+
+.main_left ul li a div strong {
+	font-weight: bold;
+	display: inline-block;
+	width: 615px;
+	font-size: 16px;
+}
+
+.main_left ul li a div span {
+	font-size: 14px;
+	color: #999999;
+	display: inline-block;
+	margin-top: 10px;
+	width: 615px;
+}
+
+.main_left ul li a div p {
+	font-size: 14px;
+	margin-top: 40px;
+	color: #999999;
+	text-indent: 2em;
+}

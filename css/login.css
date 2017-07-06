@@ -1,0 +1,101 @@
+.loginbgf {
+	width: 100%;
+	height: 845px;
+	background: url(../images/login_bg.png) no-repeat;
+	background-size: cover;
+	background-position: center;
+	box-sizing: border-box;
+}
+
+.logo {
+	text-align: center;
+	padding-top: 155px;
+	margin: 0px auto;
+	color: #fff;
+	font-size: 18px;
+}
+
+.logo>img {
+	width: 115px;
+	height: 25px;
+}
+
+.login {
+	width: 400px;
+	height: 375px;
+	background: #FFFFFF;
+	margin: 40px auto 0px;
+	border-radius: 4px;
+	box-sizing: border-box;
+	padding: 0px 40px;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.50);
+}
+
+.p_hydl {
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	padding-top: 32px;
+}
+
+.xian {
+	height: 1px;
+	border-bottom: 1px solid #EAEAEA;
+	margin-top: 24px;
+}
+
+input[type='text'],
+input[type='password'],
+input[type='email'] {
+	width: 320px;
+	height: 42px;
+	box-sizing: border-box;
+	border: 1px solid #dddddd;
+	border-radius: 4px;
+	margin-top: 22px;
+	background: #F4F4F4;
+}
+
+.wjmm {
+	margin: 20px 0px;
+	overflow: hidden;
+}
+
+.login_btn {
+	width: 320px;
+	height: 42px;
+	display: inline-block;
+	text-align: center;
+	line-height: 42px;
+	box-sizing: border-box;
+	border-radius: 4px;
+	background-color: #3499DA;
+	color: #FFFFFF;
+	font-size: 16px;
+	margin-bottom: 20px;
+}
+
+.ck {
+	vertical-align: middle;
+}
+
+/*注册*/
+.register_main{
+	width: 400px;
+	height: 436px;
+	background: #FFFFFF;
+	margin: 40px auto 0px;
+	border-radius: 4px;
+	box-sizing: border-box;
+	padding: 0px 40px;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.50);
+}
+.yhxy{
+	margin: 20px 0px;
+}
+.gologin{
+	text-align: right;
+}
+.register {
+	color: #3499DA;
+}
