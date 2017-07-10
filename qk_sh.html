@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<!-- 优先使用 IE 最新版本和 Chrome -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<!-- 避免IE使用兼容模式 -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="renderer" content="webkit">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--<title>县（区）信用管理平台</title>-->
+		<!-- 引得地址栏小图标 -->
+		<link rel="Shortcut Icon" href="images/logo_icon.png" />
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/county_rankings.css" />
+		<link rel="stylesheet" href="css/pagination.css" />
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="../../js/cityCode.js" ></script>
+		<script type="text/javascript" src="js/jquery.pagination.js"></script>
+		<script type="text/javascript" src="js/common_login.js"></script>
+		<script type="text/javascript" src="js/qk_sh.js"></script>
+	</head>
+
+	<body>
+		<div class="publisher">
+			<div class="location">信用丛书审核</div>
+			<div class="column">
+				<label >书刊名称：</label>
+				<input type="text" class="sqname" />
+				<label >状态：</label>
+				<select name="" id="provinceList">
+					<option value="1">审核中</option>
+					<option value="2">已通过</option>
+					<option value="3">被驳回</option>
+				</select>
+				<span onclick="searchFun()" style="cursor: pointer;">查询</span>
+			</div>
+			<div class="handle">
+				<a onclick="lookFun()">查看</a>
+			</div>
+			<table border="" cellspacing="" cellpadding="">
+				<thead>
+					<tr>
+						<th style="width: 6%">序号</th>
+						<th style="width:22%">书刊名称</th>
+						<th style="width: 18%">提交人</th>
+						<th style="width: 18%">提交时间</th>
+						<th style="width: 18%">状态</th>
+						<th style="width: 18%">操作</th>
+					</tr>
+				</thead>
+				<tbody id="tbody_list">
+					<!--<tr>
+						<td>
+							<input type="checkbox" />
+							<i>1</i>
+						</td>
+						<td></td>
+						<td></td>
+						<td>未提交</td>
+						<td><a onclick="fabu()">发布/</a><a onclick="bohui()">驳回</a></td>
+					</tr>
+					<tr>
+						<td>
+							<input type="checkbox" />
+							<i>1</i>
+						</td>
+						<td></td>
+						<td></td>
+						<td>未提交</td>
+						<td><a href="">发布/</a><a href="">驳回</a></td>
+					</tr>
+					<tr>
+						<td>
+							<input type="checkbox" />
+							<i>1</i>
+						</td>
+						<td></td>
+						<td></td>
+						<td>未提交</td>
+						<td><a href="">发布/</a><a href="">驳回</a></td>
+					</tr>
+					<tr>
+						<td>
+							<input type="checkbox" />
+							<i>1</i>
+						</td>
+						<td></td>
+						<td></td>
+						<td>未提交</td>
+						<td><a href="">发布/</a><a href="">驳回</a></td>
+					</tr>
+					<tr>
+						<td>
+							<input type="checkbox" />
+							<i>1</i>
+						</td>
+						<td></td>
+						<td></td>
+						<td>未提交</td>
+						<td><a href="">发布/</a><a href="">驳回</a></td>
+					</tr>
+					<tr>
+						<td>
+							<input type="checkbox" />
+							<i>1</i>
+						</td>
+						<td></td>
+						<td></td>
+						<td>未提交</td>
+						<td><a href="">发布/</a><a href="">驳回</a></td>
+					</tr>-->
+				</tbody>
+			</table>
+			<div style="text-align: center; margin-top: 40px;">
+				<div class="M-box" style="height:40px;display:inline-block;"></div>
+			</div>
+		</div>
+
+		<!--区县宣传审核-查看弹框-->
+		<div class="xysqsh_xq">
+			<div class="xysqsh_xq_tan">
+				<div class="xysqsh_xq_tan1">
+					<span class="xysqsh_xq_tan11">期刊审核-查看</span>
+					<span onclick="xqhide()" class="xysqsh_xq_tan12">x</span>
+				</div>
+				<div class="xysqsh_xq_tan2">
+					<div class="xysqsh_xq_tan2">
+						<p><span>期刊名称：</span> <em id="ck_periodicalName">xxxxxxxxx</em></p>
+						<p><span>期刊类型：</span> <em id="ck_periodicalType">xxxxxxxxxxxxx</em></p>
+						<p><span>图片：</span> <br/><img id="ck_picaddr" style="margin-top:20px" src="" /></p>
+						<p><span>内容：</span> <em id="ck_periodicalAddr">xxxxxxxxxxxxx</em></p>
+						<p style="text-align: center;margin-left:90px">驳回意见</p>
+						<textarea id="ck_rejectReason" disabled="disabled">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+				</textarea>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 发布 -->
+		<!--诚信百家-发布弹框-->
+		<div class="xysqsh_fb">
+			<div class="xysqsh_fb_tan">
+				<div class="xysqsh_fb_tan1">
+					<span onclick="fbhide()" class="xysqsh_fb_tan12">x</span>
+				</div>
+				<div class="xysqsh_fb_tan2">
+					<p style="width:80px;margin:0 auto;font-size: 16px;">请确认发布</p>
+					<p id="fb_id" style="display: none;"></p>
+					<p><span>书刊名称：</span> <em id="fb_periodicalName">xxxxx</em></p>
+					<p><span>书刊种类：</span> <em id="fb_periodicalType">xxxxx</em></p>
+					<p><span>图片路径：</span> <em id="fb_picaddr">xxxxx</em></p>
+					<p><span>内容路径：</span> <em id="fb_periodicalAddr">xxxxx</em></p>
+				</div>
+				<div class="xysqsh_fb_tan3">
+					<div class="divl" onclick="okReleaseFun();">确认</div>
+					<div onclick="fbhide()" class="divr">取消</div>
+				</div>
+			</div>
+		</div>
+
+		<!--诚信百家-驳回弹框-->
+		<div class="xysqsh_bh">
+			<div class="xysqsh_bh_tan">
+				<div class="xysqsh_bh_tan1">
+					<span onclick="bhhide()" class="xysqsh_bh_tan12">x</span>
+				</div>
+				<div class="xysqsh_bh_tan2">
+					<p style="width:80px;margin:0 auto;font-size: 16px;">请确认驳回</p>
+					<p id="bh_id" style="display: none;"></p>
+					<p><span>书刊名称：</span> <em id="bh_periodicalName">xxxxx</em></p>
+					<p><span>书刊种类：</span> <em id="bh_periodicalType">xxxxx</em></p>
+					<p><span>图片路径：</span> <em id="bh_picaddr">xxxxx</em></p>
+					<p><span>内容路径：</span> <em id="bh_periodicalAddr">xxxxx</em></p>
+					<p style="text-align: center;margin-left:90px">驳回意见</p>
+					<textarea id="bh_rejectReason"></textarea>
+				</div>
+				<div class="xysqsh_bh_tan3">
+					<div class="divl" onclick="okRejectFun();">确认驳回</div>
+					<div onclick="bhhide()" class="divr">取消</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
