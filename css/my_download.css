@@ -1,0 +1,60 @@
+.myactive {
+	border-left: 3px solid #3499DA;
+}
+
+.myDown {
+	width: 920px;
+}
+
+.myDown_top {
+	width: 100%;
+	height: 66px;
+	line-height: 66px;
+	background-color: #FFFFFF;
+	font-size: 16px;
+	color: #000000;
+	font-weight: bold;
+	border-radius: 4px;
+	box-sizing: border-box;
+	padding-left: 30px;
+}
+
+.down_load {
+	font-size: 14px;
+	color: #666666;
+	margin: 20px 0px;
+}
+
+.book_list {
+	padding-left: 60px;
+}
+
+.book_list li {
+	float: left;
+	margin-top: 20px;
+	margin-right: 20px;
+}
+
+.book_list li:nth-of-type(4n) {
+	margin-right: 0px;
+}
+
+.book_list li a {
+	display: inline-block;
+	width: 190px;
+	height: 240px;
+	text-align: center;
+	background-color: #FFFFFF;
+}
+
+.book_list li a img {
+	width: 190px;
+	height: 140px;
+}
+
+.book_list li a strong {
+	display: block;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
