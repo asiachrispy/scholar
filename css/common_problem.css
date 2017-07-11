@@ -1,0 +1,54 @@
+#container {
+	background-color: #FFFFFF;
+}
+
+.mynews_top {
+	height: 66px;
+	line-height: 66px;
+	box-sizing: border-box;
+	border-bottom: 1px solid #EEEEEE;
+	padding-left: 30px;
+	font-weight: bold;
+}
+
+.problem {
+	width: 860px;
+	margin: 30px auto;
+}
+
+.problem>strong {
+	font-weight: bold;
+}
+
+.problem>div {
+	margin-top: 30px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #EEEEEE;
+}
+
+.problem>div>a {
+	display: block;
+	margin-bottom: 20px;
+	font-size: 14px;
+	color: #444444;
+}
+
+
+.ts>div {
+	border-bottom: none;
+}
+
+.problem_p {
+	height: 80px;
+	width: 100%;
+	border-top: 1px solid #EEEEEE;
+	text-align: center;
+	line-height: 80px;
+	font-size: 14px;
+	color: #444444;
+}
+
+.problem_p>a {
+	font-size: 14px;
+	color: #3499da!important;
+}

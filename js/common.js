@@ -103,3 +103,34 @@ $(function(){
 	$("#common_right").load("common_right.html");
 	$("#common_fotter").load("common_fotter.html");
 });
+//我的下载
+function mydown() {
+	window.location.href="my_download.html";
+}
+
+//我的消息
+function mynews() {
+	window.location.href="my_news.html";
+}
+
+//用户协议
+//function userAgreement() {
+//	window.location.href="user_greement.html";
+//}
+
+//常见问题
+function commonProblem() {
+	window.location.href="common_problem.html";
+}
+
+////联系我们
+//function contactUs() {
+//	window.location.href="contact_us.html";
+//}
+
+// 反馈留言
+function FeedbackMessage() {
+	window.location.href="feedback_message.html";
+}
+
+

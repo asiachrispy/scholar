@@ -20,7 +20,8 @@
 	padding-top: 30px;
 	border-bottom: 1px solid #EEEEEE;
 }
-.mynewsList>li:last-of-type{
+
+.mynewsList>li:last-of-type {
 	border-bottom: none;
 }
 
@@ -72,6 +73,8 @@
 	font-size: 14px;
 	color: #3499DA;
 }
-.mynews_bottom:hover{
+
+.mynews_bottom:hover {
 	cursor: pointer;
 }
+

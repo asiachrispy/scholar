@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<!-- 优先使用 IE 最新版本和 Chrome -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<!-- 避免IE使用兼容模式 -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="renderer" content="webkit">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>学大夫</title>
+		<!-- 引入的公共css样式以及清除默认样式 -->
+		<link rel="stylesheet" type="text/css" href="css/common.css">
+		<!-- 引入模块的css样式 -->
+		<link rel="stylesheet" type="text/css" href="css/index_login.css">
+		<link rel="stylesheet" href="css/feedback_message.css" />
+		<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+	</head>
+
+	<body>
+		<div id="common_header"></div>
+		<!-- 中间内容部分开始 -->
+		<div class="warp">
+			<div class="box_content clearFix">
+				<div class="fl box_left">
+					<div class="box_nav">
+						<ul>
+							<li>
+								<a onclick="mydown()">
+									<i>我的下载</i>
+								</a>
+							</li>
+							<li>
+								<a onclick="mynews()">
+									<i>我的消息</i>
+								</a>
+							</li>
+							<li>
+								<a onclick="userAgreement()">
+									<i>用户协议</i>
+								</a>
+							</li>
+							<li>
+								<a onclick="commonProblem()">
+									<i>常见问题</i>
+								</a>
+							</li>
+							<li>
+								<a onclick="contactUs()">
+									<i>联系我们</i>
+								</a>
+							</li>
+							<li>
+								<a class="myactive" onclick="FeedbackMessage()">
+									<i>反馈留言</i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="fl box_center">
+					<div id="container">
+						<div>
+							<p class="mynews_top">
+								反馈留言
+							</p>
+							<div class="feedback clearFix">
+								<p>
+									<label>反馈类型</label>
+									<span>
+									<input name="feedbacktype" type="radio" />向编辑反馈（找不到书/内容举报/产品建议/活动咨询等）<br />
+									<input name="feedbacktype" type="radio" />向程序反馈（网站bug/功能建议/浏览速度/操作问题等）
+									</span>
+								</p>
+								<p>
+									<label>输入内容</label>
+									<textarea></textarea>
+								</p>
+								<p>
+									<a href="">提交</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 中间内容部分结束 -->
+		<div id="common_fotter"></div>
+	</body>
+
+</html>

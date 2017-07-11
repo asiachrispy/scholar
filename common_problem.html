@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<!-- 优先使用 IE 最新版本和 Chrome -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<!-- 避免IE使用兼容模式 -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="renderer" content="webkit">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>学大夫</title>
+		<!-- 引入的公共css样式以及清除默认样式 -->
+		<link rel="stylesheet" type="text/css" href="css/common.css">
+		<!-- 引入模块的css样式 -->
+		<link rel="stylesheet" type="text/css" href="css/index_login.css">
+		<link rel="stylesheet" href="css/common_problem.css" />
+		<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+	</head>
+
+	<body>
+		<div id="common_header"></div>
+		<!-- 中间内容部分开始 -->
+		<div class="warp">
+			<div class="box_content clearFix">
+				<div class="fl box_left">
+					<div class="box_nav">
+						<ul>
+							<li>
+								<a onclick="mydown()">
+									<i>我的下载</i>
+								</a>
+							</li>
+							<li>
+								<a onclick="mynews()">
+									<i>我的消息</i>
+								</a>
+							</li>
+							<li>
+								<a onclick="userAgreement()">
+									<i>用户协议</i>
+								</a>
+							</li>
+							<li>
+								<a class="myactive" onclick="commonProblem()">
+									<i>常见问题</i>
+								</a>
+							</li>
+							<li>
+								<a onclick="contactUs()">
+									<i>联系我们</i>
+								</a>
+							</li>
+							<li>
+								<a onclick="FeedbackMessage()">
+									<i>反馈留言</i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="fl box_center">
+					<div id="container">
+						<div>
+							<p class="mynews_top">
+								常见问题
+							</p>
+							<div class="problem">
+								<strong>一、关于帐号、注册、登录:</strong>
+								<div>
+									<a href="">1. 如何拥有学大夫帐号？</a>
+									<a href="">2. 我可以使用哪些方式登录学大夫？</a>
+									<a href="">3. 忘记密码怎么办？</a>
+									<a href="">4. 如何修改用户名？</a>
+									<a href="">5. 为什么无法登录学大夫？</a>
+									<a href="">6. 我可以注销帐号吗？</a>
+								</div>
+							</div>
+							<div class="problem ts">
+								<strong>二、关于帐号、注册、登录:</strong>
+								<div>
+									<a href="">1. 如何拥有学大夫帐号？</a>
+									<a href="">2. 我可以使用哪些方式登录学大夫？</a>
+									<a href="">3. 忘记密码怎么办？</a>
+									<a href="">4. 如何修改用户名？</a>
+									<a href="">5. 为什么无法登录学大夫？</a>
+									<a href="">6. 我可以注销帐号吗？</a>
+								</div>
+							</div>
+							<p class="problem_p">
+								如果这里没有您想找的问题，请通过<a href="">“在线提交问题/建议”</a>给我们留言。
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 中间内容部分结束 -->
+		<div id="common_fotter"></div>
+	</body>
+
+</html>
